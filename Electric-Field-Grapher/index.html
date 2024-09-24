@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Electric Field Grapher</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  <meta name="viewport">
+</head>
+
+<body>
+  <h1 id="title">Electric Field Grapher</h1>
+  <h1 class="subtitle">Edit Field</h1>
+  <br>
+  <h2>Point-like Charge</h2>
+  <input id="ptCharge" placeholder="Charge (electrons)">
+  <input id="ptXPosition" placeholder="X-Position (m)">
+  <input id="ptYPosition" placeholder="Y-Position (m)">
+  <button onclick="ptAdd()">Add</button>
+  <h2>Rod</h2>
+  <input id="rodCharge" placeholder="Total Charge (electrons)">
+  <input id="rodXPosition" placeholder="X-Position (m)">
+  <input id="rodYPosition" placeholder="Y-Position (m)">
+  <input id="rodLength" placeholder="Length (m)">
+  <input id="rodAngle" placeholder="Angle (degrees)">
+  <input id="rodFrequency" placeholder="Frequency (Not Required)">
+  <button onclick="rodAdd()">Add</button>
+  <h2>Dynamic Rod</h2>
+  <input id="dynRodChargeDensityEq" placeholder="Charge Density Eq (x)">
+  <input id="dynRodXPosition" placeholder="X-Position (m)">
+  <input id="dynRodYPosition" placeholder="Y-Position (m)">
+  <input id="dynRodLength" placeholder="Length (m)">
+  <input id="dynRodAngle" placeholder="Angle (degrees)">
+  <input id="dynRodFrequency" placeholder="Frequency (Not Required)">
+  <button onclick="dynRodAdd()">Add</button>
+  <br><br>
+  <a href="https://www.desmos.com/calculator/d3ifhvqez0" target="_blank">(Useful Desmos Graph for Charge Density Integration)</a><br>
+  <br><br>
+  <h1 class="subtitle">Edit Canvas</h1>
+  <h2>General Display</h2>
+  <input id="sideLength" placeholder="Canvas Side Length (10)">
+  <input id="precision" placeholder="Precision (0.01)">
+  <input id="luminosity" placeholder="Luminosity (100000)">
+  <h2>Limit Lightness</h2>
+  <input id="limitCap" placeholder="Limit Cap (0.8)">
+  <button id="limitButton" onclick="updateLimit()">Off</button>
+  <h2>Constant Lightness</h2>
+  <input id="ignoreCap" placeholder="Constant Cap (0.5)">
+  <button id="ignoreButton" onclick="updateIgnore()">Off</button>
+  <br><br><br><br>
+  <button onclick="updateCanvas()">Update Canvas</button>
+  <button onclick="reset()">Reset Field</button>
+  <div class="inline" id="left"><p class="inline"><button onclick="testCharge()">Test Charge</button> => <b>E</b>( <input class="small" placeholder="x" id="testX">, <input class="small" placeholder="y" id="testY"> ) = </p> <div id="E" class="inline"></div></div>
+  <br><br>
+  <div>
+    <canvas id="canvas">
+      Modern web browsers are optimized to work with canvas, and this site meets all those standards, if it's not
+      working... get a new browser.
+    </canvas>
+  </div>
+  <div id="colorWheel">
+    <h2>Hue correlates to direction. Saturation is set to 1. Lightness correlates to magnitude.</h2>
+    <img src = "colorWheel.webp">
+  </div>
+  <br><br><br>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+#title {
+  text-decoration: underline;
+  text-align: center;
+  font-size: 40px;
+}
+.subtitle {
+  text-decoration: underline;
+}
+#canvas {
+  width: 1000px;
+  height: 1000px;
+ }
+#colorWheel {
+  position: absolute;
+  left: 1100px;
+  top: 1000px;
+}
+.small {
+  width: 25px;
+  text-align: center;
+}
+.inline {
+  display:inline
+}
+#left {
+  margin-left: 400px;
+}
